@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weaver Nest</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width initial-scale = 1">
+	<link rel="stylesheet" type="text/css" href="styles.css"> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class = "container">
+			<div class = "branding">
+				<div class = " logo"><a href=""><img src="img/crochet_logo.png" width = "120px"></a></div>
+				<div class = " Brand"><a href="">WEAVER NEST</a></div>
+			</div>
+			<div class = "nav-group">
+				<div class = "nav-item active"><a href="">About</a></div>
+				<div class = "nav-item "><a href="">Workshop</a></div>
+				<div class = "nav-item " id="eq"><a href="">Products</a>
+					<ul class="drop-down" id = "products">
+						<li class="drop-down-items"><a href="#">Crochet</a></li>
+						<li class="drop-down-items"><a href="#">Macrame</a></li>
+						<li class="drop-down-items"><a href="#">Baby Wear</a></li>
+						<li class="drop-down-items"><a href="#">Winter Wear</a></li>
+						<li class="drop-down-items"><a href="#">Jewelry</a></li>
+						<li class="drop-down-items"><a href="#">Eco-friendly</a></li>
+						
+					</ul>
+				</div>
+
+				<div class = "nav-item "><a href="">DIY</a></div>
+				<div class = "nav-item "><a href="">Blog</a></div>	
+			</div>			
+
+		</div>
+		<hr >
+	</header>
+
+	<div class="main-content"> 
+		<div class = "banner-image"></div>
+		<div class = "banner-text">
+			<p>A single line about the service that we offer</p>
+			<div class = "button">Explore products</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	
+	window.onscroll=function(){
+		if(window.scrollY != 0){
+			document.querySelector("hr").style.boxShadow = "rgb(126 126 126) 14px 6px 11px 4px";
+
+		}
+		else{
+			document.querySelector("hr").style.boxShadow = "initial";
+		}
+	};
+
+	function dropdown(x){
+					console.log("hi");
+		document.querySelector("#"+x).style.display = "flex";
+	}
+
+	function dropdown_disappear(x){
+				console.log("hi");
+	document.querySelector("#"+x).style.display = "none";
+	}
+</script>
+</html>

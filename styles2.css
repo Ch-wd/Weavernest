@@ -1,0 +1,135 @@
+
+*{
+	margin:0px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header{
+	position: fixed;
+	width: -webkit-fill-available;
+	background-color: #fff;
+	margin-top: -120px;
+	z-index: 9999;
+}
+.container{
+	display: flex;
+	/*position: fixed;*/
+	left: 0;
+	right: 0;
+	justify-content: space-around;
+	font-size: 1.8em;
+	height: 120px;
+}
+
+a{
+	text-decoration: inherit;
+	color: inherit;
+}
+.nav-group{
+	width: 80%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-end;
+	font-family: 'Ms Madi', cursive;
+}
+
+.branding{
+	width: 30%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'Ms Madi', cursive;
+	font-size: 1.2em;
+	/*align-content: center;*/
+	text-align: center;
+}
+
+
+.nav-item{
+	padding: 1rem;
+	border-radius: 20px;
+}
+.nav-item:hover{
+	/*padding: 1rem;*/
+	background-color: #c18bb5;
+	color: #fff;
+	position:relative;
+}
+.drop-down-items{
+	/*width: 120%;*/
+	list-style: none;
+	padding:4%;
+
+}
+
+.drop-down-items:hover{
+	background-color: #fff;
+	color:#c18bb5;
+}
+.drop-down{
+	font-size: 1em;
+	display: none;	
+	width: 100%;
+}
+
+#eq:hover > ul{
+	position: absolute;
+	background-color: #c18bb5;
+	color: #fff;
+	left:0;
+	width: 160%;
+/*	display: flex;
+	flex-direction: column;*/
+	display: block;
+	padding: 1rem;
+	border-radius: 0 20px 20px 20px;
+}
+hr{
+	height:2px;
+	border-width:0;
+	color:gray;
+	background-color:black;
+	margin: 10px 10px 0px 10px;
+	transition: all 2s;
+
+}
+.main-content{
+	/*height: 1000px;*/
+	/*background: #e8a6a6;*/
+
+	/*position: fixed;*/
+}
+
+.banner-image{
+	width: 100%;
+	margin-top: 120px;
+	padding-top: 40%;
+	background-image: url(img/crochet_banner.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: 900px auto; 
+	position: relative;
+	z-index: -1;
+}
+
+.banner-text{
+	position: absolute;
+	top:50%;
+	left: 5%;
+	font-size: 2.5em;
+	width: 40%;
+}
+p{
+	text-align: center;
+}
+
+.button{
+	font-size: 0.5em !important;
+	position: relative;
+	left: 50%;
+}
+@media (min-width: 640px ) and (max-width: 1007px){
+
+}
