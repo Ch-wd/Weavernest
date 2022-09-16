@@ -59,7 +59,7 @@
 						<img src="img/product1.jpg">
 					</div>
 					<a href="#"><div class = "product-title">
-						Title
+						crochet bag
 					</div></a>
 				</div>
 
@@ -69,7 +69,7 @@
 						<img src="img/product2.jpg">
 					</div>
 					<a href="#"><div class = "product-title">
-						Title
+						Crochet bag
 					</div></a>
 				</div>
 
@@ -79,29 +79,10 @@
 						<img src="img/product3.jpg">
 					</div>
 					<a href="#"><div class = "product-title">
-						Title
+						Amigurumi Dolls
 					</div></a>
 				</div>
 
-				<!-- Product 4 -->
-				<div class = "products">
-					<div class = "product-image">
-						<img src="img/product4.jpg">
-					</div>
-					<a href="#"><div class = "product-title">
-						Title
-					</div></a>
-				</div>
-
-				<!-- Product 5 -->
-				<div class = "products">
-					<div class = "product-image">
-						<img src="">
-					</div>
-					<a href="#"><div class = "product-title">
-						Title
-					</div></a>
-				</div>
 
 				<div class = "slider-buttons button-next" onclick="gotonext(1)">&#9655</div>
 			</div>
@@ -111,7 +92,9 @@
 
 <script type="text/javascript">
 	imgs = document.querySelectorAll(".product-image img");
-	const images=["img/product1.jpg" , "img/product2.jpg" , "img/product3.jpg" , "img/product4.jpg"];
+	conts = document.querySelectorAll(".product-title");
+	const images=["img/product1.jpg" , "img/product2.jpg" , "img/product3.jpg" , "img/product4.jpg","img/product5.jpg"];
+	const descr=["crochet bag" , "Crochet bag", "Amigurimi Dolls" , "Mandala Crochet","Crochet Beanie" ];
 	let j = 0;
 	window.onscroll = function() {
 		if(window.scrollY>0){
@@ -128,13 +111,15 @@
 		if(x == 1){
 			j++;
 			for (var i = 0; i < 3; i++) {
-				imgs[i].src = images[Math.abs((j+i)%4)];
+				imgs[i].src = images[Math.abs((j+i)%5)];
+				conts[i].textContent = descr[Math.abs((j+i)%5)];
 			}
 		}
 		else{
 			j--;
 			for (var i = 0; i < 3; i++) {
-				imgs[i].src = images[Math.abs((j+i)%4)];
+				imgs[i].src = images[Math.abs((j+i)%5)];
+				conts[i].textContent = descr[Math.abs((j+i)%5)];
 			}
 		}
 	}
