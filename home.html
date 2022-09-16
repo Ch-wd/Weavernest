@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weaver Nest</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<link rel="stylesheet" type="text/css" href="styles_new.css"> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class = "fixed-box">
+		<div class = "header-container">
+			<div class = "branding">
+				<div class = "logo">
+					<a href = "#"><img src="img/crochet_logo.png"></a>
+				</div>
+				<div class = "brand-name">
+					<a href = "#">WEAVER NEST</a>
+				</div>
+			</div>
+			<ul class = "nav-bar">
+				<li class = "nav-item"><a href="#">About</a></li>
+				<li class = "nav-item"><a href="#">Workshops</a></li>
+				<li class = "nav-item has-submenu"><a href="#">Products</a>
+					<ul class = "sub-menu">
+						<li class = "sub_item"><a href="#">Crochet</a></li>
+						<li class = "sub_item"><a href="#">Macrame</a></li>
+						<li class = "sub_item"><a href="#">Baby Wear</a></li>
+						<li class = "sub_item"><a href="#">Winter Wear</a></li>
+						<li class = "sub_item"><a href="#">Jewelry</a></li>
+						<li class = "sub_item"><a href="#">Eco-friendly</a></li>
+					</ul>
+				</li>
+				<li class = "nav-item"><a href="#">DIY</a></li>
+				<li class = "nav-item"><a href="#">Blog</a></li>
+			</ul>
+					
+		</div>
+		<hr>
+	</div>
+	<div class = "main-container">
+		<div class = "main-content">
+			<div class = "text">A single line about our services</div>
+			<a href = "#page-2" ><div class = "button">Explore our products</div></a>
+		</div>
+		<div class = "main-image"></div>		
+	</div>
+
+	<div class = "product-demo-container" id="page-2">
+			<h1>Latest Products</h1>
+			<div class = "products-container">
+
+				<div class = "slider-buttons button-previous" onclick="gotonext(0)">&#9665</div>
+				<!-- Product 1 -->
+				<div class = "products">
+					<div class = "product-image">
+						<img src="img/product1.jpg">
+					</div>
+					<a href="#"><div class = "product-title">
+						Title
+					</div></a>
+				</div>
+
+				<!-- Product 2 -->
+				<div class = "products">
+					<div class = "product-image">
+						<img src="img/product2.jpg">
+					</div>
+					<a href="#"><div class = "product-title">
+						Title
+					</div></a>
+				</div>
+
+				<!-- Product 3 -->
+				<div class = "products">
+					<div class = "product-image">
+						<img src="img/product3.jpg">
+					</div>
+					<a href="#"><div class = "product-title">
+						Title
+					</div></a>
+				</div>
+
+				<!-- Product 4 -->
+				<div class = "products">
+					<div class = "product-image">
+						<img src="img/product4.jpg">
+					</div>
+					<a href="#"><div class = "product-title">
+						Title
+					</div></a>
+				</div>
+
+				<!-- Product 5 -->
+				<div class = "products">
+					<div class = "product-image">
+						<img src="">
+					</div>
+					<a href="#"><div class = "product-title">
+						Title
+					</div></a>
+				</div>
+
+				<div class = "slider-buttons button-next" onclick="gotonext(1)">&#9655</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	imgs = document.querySelectorAll(".product-image img");
+	const images=["img/product1.jpg" , "img/product2.jpg" , "img/product3.jpg" , "img/product4.jpg"];
+	let j = 0;
+	window.onscroll = function() {
+		if(window.scrollY>0){
+			document.querySelector("hr").style.boxShadow = "rgb(203 158 196) 7px 5px 0px 4px";
+		}
+		else{
+			document.querySelector("hr").style.boxShadow = "0px 0px 0px 0px";
+		}
+
+	};
+
+	function gotonext(x){
+
+		if(x == 1){
+			j++;
+			for (var i = 0; i < 3; i++) {
+				imgs[i].src = images[Math.abs((j+i)%4)];
+			}
+		}
+		else{
+			j--;
+			for (var i = 0; i < 3; i++) {
+				imgs[i].src = images[Math.abs((j+i)%4)];
+			}
+		}
+	}
+</script>
+</html>
